@@ -158,5 +158,12 @@ class Store
     for index in @indices
       index.update existing, object, k, replace
 
-module.exports.Store = Store
-module.exports.Key = Key
+if typeof define == "function" and define.amd
+  define -> Store: Store, Key: Key
+if typeof module == "object" and module.exports
+  module.exports.Store = Store
+  module.exports.Key = Key
+else
+  this.store =
+    Store: Store
+    Key: Key

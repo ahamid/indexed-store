@@ -324,8 +324,23 @@
 
   })();
 
-  module.exports.Store = Store;
+  if (typeof define === "function" && define.amd) {
+    define(function() {
+      return {
+        Store: Store,
+        Key: Key
+      };
+    });
+  }
 
-  module.exports.Key = Key;
+  if (typeof module === "object" && module.exports) {
+    module.exports.Store = Store;
+    module.exports.Key = Key;
+  } else {
+    this.store = {
+      Store: Store,
+      Key: Key
+    };
+  }
 
 }).call(this);
