@@ -5,7 +5,13 @@
     __hasProp = {}.hasOwnProperty,
     __slice = [].slice;
 
-  _ = require('lodash');
+  if (typeof require !== 'undefined') {
+    _ = require('lodash');
+  } else {
+    if (typeof this._ === 'undefined') {
+      throw new Error('store requires lodash or underscore');
+    }
+  }
 
   Key = (function() {
     function Key(_at_name, _at_unique, _at_derive) {

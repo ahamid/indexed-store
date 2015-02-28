@@ -1,4 +1,8 @@
-_ = require 'lodash'
+if typeof require != 'undefined'
+  _ = require 'lodash'
+else
+  if typeof this._ == 'undefined'
+    throw new Error('store requires lodash or underscore')
 
 
 class Key
