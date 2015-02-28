@@ -7,6 +7,10 @@
     "Aaron Hamid"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ahamid/indexed-store.git"
+  },
   "ignore": [
     "node_modules",
     "tests"

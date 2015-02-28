@@ -4,11 +4,14 @@
   "description": "simple object store supporting multiple indices",
   "main": "index.js",
   "scripts": {
-    "test": "cake test",
-    "prepublish": "coffee -c index.coffee"
+    "test": "cake test"
   },
   "author": "Aaron Hamid",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ahamid/indexed-store.git"
+  },
   "dependencies": {
     "lodash": "^3.3.1"
   },
