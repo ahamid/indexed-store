@@ -342,9 +342,7 @@
         Key: Key
       };
     });
-  }
-
-  if (typeof module === "object" && module.exports) {
+  } else if (typeof module === "object" && module.exports) {
     module.exports.Store = Store;
     module.exports.Key = Key;
   } else {

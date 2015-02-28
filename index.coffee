@@ -168,7 +168,7 @@ class Store
 
 if typeof define == "function" and define.amd
   define -> Store: Store, Key: Key
-if typeof module == "object" and module.exports
+else if typeof module == "object" and module.exports
   module.exports.Store = Store
   module.exports.Key = Key
 else
