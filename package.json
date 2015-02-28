@@ -1,5 +1,5 @@
 {
-  "name": "store",
+  "name": "indexed-store",
   "version": "0.0.1",
   "description": "simple object store supporting multiple indices",
   "main": "index.js",
