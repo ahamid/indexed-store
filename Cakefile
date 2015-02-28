@@ -1,8 +1,8 @@
-{exec} = require "child_process"
+{exec} = require 'child_process'
  
-REPORTER = "spec"
+REPORTER = 'spec'
  
-task "test", "run tests", ->
+task 'test', 'run tests', ->
   exec "NODE_ENV=test 
     ./node_modules/.bin/mocha 
     --compilers coffee:coffee-script
@@ -15,3 +15,4 @@ task "test", "run tests", ->
     console.log output
     throw err if err
 
+task 'build', -> exec 'coffee -c index.coffee'

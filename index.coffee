@@ -3,7 +3,11 @@ if typeof require != 'undefined'
 else
   if typeof this._ == 'undefined'
     throw new Error('store requires lodash or underscore')
+  _ = this._
 
+
+capitalize = (s) ->
+  s.charAt(0).toUpperCase() + s[1..]
 
 class Key
   constructor: (@name, @unique, @derive = @name) ->
@@ -20,7 +24,7 @@ class Index
   registerOn: (obj) ->
     keyName = @key.name
     obj[@field] = this
-    obj["getBy#{_.capitalize(keyName)}"] = @get.bind(this)
+    obj["getBy#{capitalize(keyName)}"] = @get.bind(this)
 
 
 class UniqueIndex extends Index
